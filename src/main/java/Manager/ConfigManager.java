@@ -20,7 +20,10 @@ public class ConfigManager {
             Config.Builder builder = new Config.Builder()
                     .serverAddress(properties.getProperty("server.address"))
                     .serverPort(Integer.parseInt(properties.getProperty("server.port")))
-                    .debugMode(Boolean.parseBoolean(properties.getProperty("debug.mode")));
+                    .debugMode(Boolean.parseBoolean(properties.getProperty("debug.mode")))
+                    .dbConfiguration(properties.getProperty("sql.url"),
+                            properties.getProperty("sql.user"),
+                            properties.getProperty("sql.password"));
 
             config = builder.build();
 
