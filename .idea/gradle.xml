@@ -10,6 +10,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/DB" />
+            <option value="$PROJECT_DIR$/GameServer" />
+            <option value="$PROJECT_DIR$/Resource" />
+            <option value="$PROJECT_DIR$/ServerCore" />
           </set>
         </option>
       </GradleProjectSettings>

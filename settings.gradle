@@ -1,3 +1,4 @@
 rootProject.name = 'newServer'
-include 'DB'
+include 'GameServer','Resource','DB'
+include 'ServerCore'
 
