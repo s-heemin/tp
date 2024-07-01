@@ -1,8 +1,10 @@
-package Configuration;
+package toyProject.root.Configuration;
 
-import Mappers.ServerMapper;
+import toyProject.root.DBContexts.DBContext;
+import toyProject.root.Mappers.ServerMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+
 import java.io.StringReader;
 import java.util.Objects;
 import java.util.function.Function;
@@ -10,7 +12,7 @@ import java.util.function.Function;
 public class DBSqlExcutor {
     public static SqlSessionFactory sqlSessionFactory = null;
 
-    public GlobalDBContext dbContext;
+    public DBContext dbContext;
     private DBSqlExcutor(String host, String username, String password) {
         createFactory(host, username, password);
     }
@@ -23,12 +25,12 @@ public class DBSqlExcutor {
         var fetchString = MybatisProperty.fetchString(host, username, password);
         var stringReader = new StringReader(fetchString);
         sqlSessionFactory = new org.apache.ibatis.session.SqlSessionFactoryBuilder().build(stringReader);
-        sqlSessionFactory.getConfiguration().addMapper(ServerMapper.class);
+        RegisterMappers.addMappers();
         sqlSessionFactory.openSession(true).close();
     }
 
     public void init() {
-        dbContext = new GlobalDBContext(this);
+        dbContext = new DBContext(this);
     }
 
     public <T extends Object> T query(Function<SqlSession, T> e) {

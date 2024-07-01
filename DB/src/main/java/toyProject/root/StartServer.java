@@ -1,10 +1,8 @@
-import Configuration.ConfigManager;
-import Configuration.DBSqlExcutor;
-import Configuration.GlobalDBContext;
-import Models.DMServer;
+package toyProject.root;
 
-import java.sql.Connection;
-import java.util.Objects;
+import toyProject.root.Configuration.DBSqlExcutor;
+import toyProject.root.Models.DMPlayer;
+import toyProject.root.Models.DMServer;
 
 public class StartServer {
     public static void main(String[] args) {
@@ -18,5 +16,8 @@ public class StartServer {
 
         var model = DMServer.of(3306, "localhost");
         excutor.dbContext.server.save(model);
+
+        var playerModel = DMPlayer.of("1234", 1,2,3,4,5,6);
+        excutor.dbContext.player.save(playerModel);
     }
 }

@@ -1,4 +1,4 @@
-package Configuration;
+package toyProject.root.Configuration;
 
 public class MybatisProperty {
     public static String fetchString(String host, String username, String password) {

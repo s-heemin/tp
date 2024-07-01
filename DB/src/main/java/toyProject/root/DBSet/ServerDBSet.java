@@ -1,9 +1,8 @@
-package DBSet;
+package toyProject.root.DBSet;
 
-import Configuration.DBSqlExcutor;
-import Configuration.GlobalDBContext;
-import Mappers.ServerMapper;
-import Models.DMServer;
+import toyProject.root.Configuration.DBSqlExcutor;
+import toyProject.root.Mappers.ServerMapper;
+import toyProject.root.Models.DMServer;
 
 import java.time.Instant;
 

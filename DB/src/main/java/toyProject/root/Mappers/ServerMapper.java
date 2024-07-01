@@ -1,9 +1,7 @@
-package Mappers;
+package toyProject.root.Mappers;
 
-import Models.DMServer;
+import toyProject.root.Models.DMServer;
 import org.apache.ibatis.annotations.*;
-
-import java.util.List;
 
 @Mapper
 public interface ServerMapper {

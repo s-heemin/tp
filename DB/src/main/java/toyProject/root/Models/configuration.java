@@ -1,4 +1,4 @@
-package Models;
+package toyProject.root.Models;
 
 public class configuration {
     public String url;

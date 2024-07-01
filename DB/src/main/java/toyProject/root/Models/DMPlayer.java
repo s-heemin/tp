@@ -1,4 +1,6 @@
-package Models;
+package toyProject.root.Models;
+
+import java.time.Instant;
 
 public class DMPlayer {
     public long id;
@@ -9,6 +11,10 @@ public class DMPlayer {
     public long mp;
     public int x;
     public int y;
+
+    public Instant updated_at;
+
+    public Instant created_at;
 
     public static DMPlayer of(String name, int job, long attack, long hp, long mp, int x, int y) {
         var model = new DMPlayer();

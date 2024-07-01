@@ -2,8 +2,7 @@ package PlayerComponent;
 
 import BaseComponent.Unit;
 import Components.Position;
-import Models.DMPlayer;
-import Types.Job;
+import toyProject.root.Models.DMPlayer;
 import Types.UnitType;
 
 public class PlayerComponent extends Unit {

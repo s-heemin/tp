@@ -1,4 +1,4 @@
-package Configuration;
+package toyProject.root.Configuration;
 
 import java.io.FileInputStream;
 import java.io.IOException;

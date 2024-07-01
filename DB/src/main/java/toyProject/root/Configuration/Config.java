@@ -1,6 +1,6 @@
-package Configuration;
+package toyProject.root.Configuration;
 
-import Models.configuration;
+import toyProject.root.Models.configuration;
 
 public class Config {
     private final String serverAddress;

@@ -1,4 +1,4 @@
-package Models;
+package toyProject.root.Models;
 
 import java.time.Instant;
 
